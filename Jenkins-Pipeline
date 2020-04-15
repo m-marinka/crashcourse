@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Slack'){
+            steps {
+                slackSend channel: '#crashcourse_team5', 
+                          message: 'test'
+            }
+        }
+    }
+}
